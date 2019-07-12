@@ -32,36 +32,35 @@ function bootstrapArticles(content) {
   //create elements
   const card = document.createElement("div");
   const cardHeadline = document.createElement("div");
-  const cardAuthor = document.createElement("div");
+  const cardAuthorContainer = document.createElement("div");
   const cardImageContainer = document.createElement("div");
-  const cardImage = document.createElement("img");
+  const picture = document.createElement("img");
   const cardAuthorName = document.createElement("span");
 
   // setting classes
   card.classList.add("card");
   cardHeadline.classList.add("headline");
-  cardAuthor.classList.add("author");
+  cardAuthorContainer.classList.add("author");
   cardImageContainer.classList.add("img-container");
 
   // appending together
   card.appendChild(cardHeadline);
-  card.appendChild(cardAuthor);
-  cardAuthor.appendChild(cardImageContainer);
-  cardImageContainer.appendChild(cardImage);
-  cardAuthor.appendChild(cardAuthorName);
+  card.appendChild(cardAuthorContainer);
+  cardAuthorContainer.appendChild(cardImageContainer);
+  cardImageContainer.appendChild(picture);
+  cardAuthorContainer.appendChild(cardAuthorName);
 
   //setting content
   cardHeadline.textContent = content.headline;
-  cardAuthor.textContent = content.authorName;
-  cardImage.src = content.authorPhoto;
-  console.log(content);
+  cardAuthorName.textContent = content.authorName;
+  picture.src = content.authorPhoto;
 
   return card;
 }
 
 axios.get("https://lambda-times-backend.herokuapp.com/articles").then(data => {
   const articles = data.data.articles;
-  console.log(articles);
+
   articles.javascript.forEach(javascriptArticle => {
     const element = javascriptArticles(javascriptArticle);
     cardsContainer.appendChild(element);
@@ -74,29 +73,28 @@ function javascriptArticles(content) {
   //create elements
   const card = document.createElement("div");
   const cardHeadline = document.createElement("div");
-  const cardAuthor = document.createElement("div");
+  const cardAuthorContainer = document.createElement("div");
   const cardImageContainer = document.createElement("div");
-  const cardImage = document.createElement("img");
+  const picture = document.createElement("img");
   const cardAuthorName = document.createElement("span");
 
   // setting classes
   card.classList.add("card");
   cardHeadline.classList.add("headline");
-  cardAuthor.classList.add("author");
+  cardAuthorContainer.classList.add("author");
   cardImageContainer.classList.add("img-container");
 
   // appending together
   card.appendChild(cardHeadline);
-  card.appendChild(cardAuthor);
-  cardAuthor.appendChild(cardImageContainer);
-  cardImageContainer.appendChild(cardImage);
-  cardAuthor.appendChild(cardAuthorName);
+  card.appendChild(cardAuthorContainer);
+  cardAuthorContainer.appendChild(cardImageContainer);
+  cardImageContainer.appendChild(picture);
+  cardAuthorContainer.appendChild(cardAuthorName);
 
   //setting content
   cardHeadline.textContent = content.headline;
-  cardAuthor.textContent = content.authorName;
-  cardImage.src = content.authorPhoto;
-  console.log(content);
+  cardAuthorName.textContent = content.authorName;
+  picture.src = content.authorPhoto;
 
   return card;
 }
@@ -116,29 +114,28 @@ function nodeArticles(content) {
   //create elements
   const card = document.createElement("div");
   const cardHeadline = document.createElement("div");
-  const cardAuthor = document.createElement("div");
+  const cardAuthorContainer = document.createElement("div");
   const cardImageContainer = document.createElement("div");
-  const cardImage = document.createElement("img");
+  const picture = document.createElement("img");
   const cardAuthorName = document.createElement("span");
 
   // setting classes
   card.classList.add("card");
   cardHeadline.classList.add("headline");
-  cardAuthor.classList.add("author");
+  cardAuthorContainer.classList.add("author");
   cardImageContainer.classList.add("img-container");
 
   // appending together
   card.appendChild(cardHeadline);
-  card.appendChild(cardAuthor);
-  cardAuthor.appendChild(cardImageContainer);
-  cardImageContainer.appendChild(cardImage);
-  cardAuthor.appendChild(cardAuthorName);
+  card.appendChild(cardAuthorContainer);
+  cardAuthorContainer.appendChild(cardImageContainer);
+  cardImageContainer.appendChild(picture);
+  cardAuthorContainer.appendChild(cardAuthorName);
 
   //setting content
   cardHeadline.textContent = content.headline;
-  cardAuthor.textContent = content.authorName;
-  cardImage.src = content.authorPhoto;
-  console.log(content);
+  cardAuthorName.textContent = content.authorName;
+  picture.src = content.authorPhoto;
 
   return card;
 }
@@ -157,29 +154,28 @@ function technologyArticles(content) {
   //create elements
   const card = document.createElement("div");
   const cardHeadline = document.createElement("div");
-  const cardAuthor = document.createElement("div");
+  const cardAuthorContainer = document.createElement("div");
   const cardImageContainer = document.createElement("div");
-  const cardImage = document.createElement("img");
+  const picture = document.createElement("img");
   const cardAuthorName = document.createElement("span");
 
   // setting classes
   card.classList.add("card");
   cardHeadline.classList.add("headline");
-  cardAuthor.classList.add("author");
+  cardAuthorContainer.classList.add("author");
   cardImageContainer.classList.add("img-container");
 
   // appending together
   card.appendChild(cardHeadline);
-  card.appendChild(cardAuthor);
-  cardAuthor.appendChild(cardImageContainer);
-  cardImageContainer.appendChild(cardImage);
-  cardAuthor.appendChild(cardAuthorName);
+  card.appendChild(cardAuthorContainer);
+  cardAuthorContainer.appendChild(cardImageContainer);
+  cardImageContainer.appendChild(picture);
+  cardAuthorContainer.appendChild(cardAuthorName);
 
   //setting content
   cardHeadline.textContent = content.headline;
-  cardAuthor.textContent = content.authorName;
-  cardImage.src = content.authorPhoto;
-  console.log(content);
+  cardAuthorName.textContent = content.authorName;
+  picture.src = content.authorPhoto;
 
   return card;
 }
